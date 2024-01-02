@@ -25,6 +25,14 @@ const routes: Routes = [
         loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
       },
       {
+        path: 'browse',
+        loadChildren: () => import('./browse/browse.module').then( m => m.BrowsePageModule)
+      },
+      {
+        path: 'bid-auction',
+        loadChildren: () => import('./bid-auction/bid-auction.module').then( m => m.BidAuctionPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
@@ -39,6 +47,8 @@ const routes: Routes = [
     path: 'address',
     loadChildren: () => import('./address/address.module').then( m => m.AddressPageModule)
   },
+
+
   
 ];
 
